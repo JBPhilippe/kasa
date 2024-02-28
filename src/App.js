@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
+import React from "react";
+import { Routes, Route, Navigate, HashRouter } from "react-router-dom";
+import About from "./pages/about/About";
+import Home from "./pages/home/Home";
+import ErrorPage from "./pages/error/Error";
+// import AccomodationCard from "./pages/accomodation/AccomodationCard";
+// a importer qd les fiches logements seront en place
+
+
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <HashRouter>
+      <Routes>
+        <Route path="/" element={<Navigate replace to="/home" />} />
+        <Route path="/home" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        {/* <Route path="/logement/:id" element={<AccomodationCard />} /> */}
+        {/* A voir qd les fiches seront en place, penser à l'ID des logements */}
+        <Route path="*" element={<ErrorPage />} />
+      </Routes>
+    </HashRouter>
   );
-}
+};
 
 export default App;
