@@ -6,6 +6,8 @@ import Home from "./pages/home/Home";
 import ErrorPage from "./pages/error/Error";
 // import AccomodationCard from "./pages/accomodation/AccomodationCard";
 // a importer qd les fiches logements seront en place
+import "./styles/App.scss"
+
 
 
 
