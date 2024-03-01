@@ -2,7 +2,7 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 
 
-const Nav = () => {
+const Nav = () =>  {
   return (
     <nav className="nav-header">
       <NavLink to="/" className="nav_link_home">
