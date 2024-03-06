@@ -1,0 +1,17 @@
+.accomodation {
+
+
+    &-img {
+    display: flex; 
+    justify-content: center;
+    object-fit: cover;
+    margin-bottom: 100px;
+}
+
+}
+
+
+.accomodation-host-infos {
+    display: flex;
+    justify-content: space-between;
+}

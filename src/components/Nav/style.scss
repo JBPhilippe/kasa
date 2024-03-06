@@ -1,0 +1,33 @@
+@import '../../variables.scss';
+
+
+.nav {
+	flex-wrap: nowrap;
+	
+	
+	&-link-home,
+	&-link-about {
+	text-decoration: none;
+	color: black;
+	margin-left: 0.625rem;
+	font-size: 0.75rem;
+	font-weight: 500;
+	line-height: 100%;
+	text-transform: uppercase;
+	@include desktop-breakpoint {
+		margin-left: 3.5625rem;
+		font-size: 1.5rem;
+		text-transform: capitalize;
+	}
+	&:hover{
+		text-decoration: underline;
+	}
+	}
+
+}
+
+
+
+
+
+   
