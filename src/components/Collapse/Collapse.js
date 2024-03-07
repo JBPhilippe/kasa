@@ -1,6 +1,6 @@
 import { useState } from "react";
 import icon from '../../assets/chevron.svg';
-import "./style.scss";
+import "./collapse.scss";
 
 
 const iconInitialState = {

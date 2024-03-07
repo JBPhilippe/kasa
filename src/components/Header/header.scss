@@ -1,0 +1,17 @@
+@import '../../variables.scss';
+
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 2rem 3rem 2rem 3rem;
+
+	&_fig {
+		margin: 0;
+	}
+	
+    @include mobile-breakpoint {
+		margin: 1rem 1rem 1rem 1rem;
+	}
+}
+

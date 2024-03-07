@@ -2,8 +2,9 @@ import React from "react";
 import Header from "../../components/Header/Header";
 import Banner from "../../components/Banner/Banner";
 import imgHomeBanner from "../../assets/imgHomeBanner.png";
-import Gallery from "../../components/Gallery";
-import Footer from "../../components/Footer";
+import Gallery from "../../components/Gallery/Gallery";
+import Footer from "../../components/Footer/Footer";
+import './home.scss'
 
 
 const Home = () => {

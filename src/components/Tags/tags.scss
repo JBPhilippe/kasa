@@ -1,3 +1,6 @@
+@import '../../variables.scss';
+
+
 .housing-tags {
 	display: flex;
 	gap: 1rem;
@@ -6,7 +9,7 @@
   .tag {
 	width: auto;
 	height: 25px;
-	background-color: #ff6060;
+	background-color: $primary-color;
 	color: #fff;
 	font-size: 14px;
 	font-weight: 500;
@@ -16,8 +19,4 @@
 	margin-top: 20px;
   }
   
-  @media screen and (max-width: 768px) {
-	.tag {
-	  font-size: 12px;
-	}
-  }
+  

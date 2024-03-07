@@ -1,4 +1,5 @@
 import React from 'react';
+import './cards.scss'
 
 
 const Cards = ({image , title}) => {

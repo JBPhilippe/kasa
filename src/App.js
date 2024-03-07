@@ -3,11 +3,8 @@ import React from "react";
 import { Routes, Route, Navigate, HashRouter } from "react-router-dom";
 import About from "./pages/about/About";
 import Home from "./pages/home/Home";
-import ErrorPage from "./pages/error/Error";
+import ErrorPage from "./pages/error/ErrorPage";
 import AccomodationPage from "./pages/accomodationSheet/AccomodationPage";
-import "./styles/App.scss"
-
-
 
 
 

@@ -1,34 +1,35 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react"
-import Collapse from "../../components/Collapse/Collapse";
-import NotFound from "../../pages/error/Error";
-import Footer from "../Footer";
-import Header from "../../components/Header/Header";
-import Host from "../../components/Host/Host"
+import Collapse from "../Collapse/Collapse";
+import ErrorPage from "../../pages/error/ErrorPage";
+import Footer from "../Footer/Footer";
+import Header from "../Header/Header";
+import Host from "../Host/Host"
 import Rating from "../Rating/Rating";
-import Slider from "../../components/Slider/Slider";
-import Tags from "../../components/Tags/Tags";
+import Slider from "../Slider/Slider";
+import Tags from "../Tags/Tags";
 import ItemsData from "../../datas/accomodation.json"
-import "./style.scss";
+import "./accomodation.scss";
 
-const Logement = () => {
+const AccomodationSheet = () => {
 
   
   const { id } = useParams();
 
   const [sliderPicture, setSliderPicture] = useState([]);
   
-  const housing = ItemsData.find((item) => item.id === id);
-
+  const accomodation = ItemsData.find((item) => item.id === id);
+  document.title=accomodation.title
+  
   useEffect(() => {
-		if (housing) {
-			setSliderPicture(housing.pictures);
+		if (accomodation) {
+			setSliderPicture(accomodation.pictures);
 		}
 
-	}, [id, housing]);
+	}, [id, accomodation]);
 
-	if (!housing) {
-		return <NotFound />;
+	if (!accomodation) {
+		return <ErrorPage />;
 	}
 
   const {
@@ -39,7 +40,7 @@ const Logement = () => {
     title,
     location,
     host: { name, picture },
-  } = housing;
+  } = accomodation;
 
   const [firstName, lastName] = name.split(" ");
   
@@ -53,11 +54,11 @@ const Logement = () => {
         <Slider sliderPicture={sliderPicture} />
         
 
-        <section className="housing-header">
+        <section className="accomodation-header">
 
-          <div className="housing-info">
-            <h1 className="housing-title">{title}</h1>
-            <p className="housing-location">{location}</p>
+          <div className="accomodation-info">
+            <h1 className="accomodation-title">{title}</h1>
+            <p className="accomodation-location">{location}</p>
             <Tags tags={tags} />
           </div>
 
@@ -68,7 +69,7 @@ const Logement = () => {
 
         </section>
 
-        <section className="housing-collapse">
+        <section className="accomodation-collapse">
           
           <Collapse title="Description">
             <p>{description}</p>
@@ -91,4 +92,4 @@ const Logement = () => {
   );
 };
 
-export default Logement;
+export default AccomodationSheet;

@@ -1,8 +1,8 @@
-import "./style.scss";
+import "./host.scss";
 
 const Host = ({ firstName, lastName, picture }) => {
   return (
-    <div className="housing-host">
+    <div className="accomodation-host">
         <div className="host-name">
           <p>{firstName}</p>
           <p>{lastName}</p>

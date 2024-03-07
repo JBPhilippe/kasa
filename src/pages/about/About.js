@@ -1,11 +1,11 @@
 import React from "react";
-import Footer from "../../components/Footer";
+import Footer from "../../components/Footer/Footer";
 import Header from "../../components/Header/Header";
 import Banner from '../../components/Banner/Banner'
 import imgAboutBanner from "../../assets/imgAboutBanner.png";
 import Collapse from "../../components/Collapse/Collapse";
 import CollapseData from "../../datas/aboutCollapse.json"
-import './style.scss'
+import './about.scss'
 
 const About = () => {
   return (

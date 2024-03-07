@@ -1,12 +1,12 @@
 import React from "react";
-import Accomodationdisplay from "../../components/AccomodationSheet/AccomodationDisplay"
+import AccomodationSheet from "../../components/AccomodationSheet/AccomodationSheet"
 
 
 
 const AccomodationPage = () => {
   return (
     <div className="home">
-      <Accomodationdisplay /> 
+      <AccomodationSheet /> 
     </div>
   );
 };

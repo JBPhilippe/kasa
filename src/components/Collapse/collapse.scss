@@ -1,6 +1,7 @@
+@import '../../variables.scss';
+
 .collapses-container {
   width: 85%;
-  /* height: 100%; */
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -16,7 +17,7 @@
   font-size: 22px;
   padding: 0 20px;
   text-align: start;
-  background-color: #ff6060;
+  background-color: $primary-color;
   color: #fff;
   cursor: pointer;
   border: none;
@@ -29,7 +30,7 @@
 
 .collapse-content {
   background-color: #f6f6f6;
-  color: #ff6060;
+  color: $primary-color;
   font-size: 18px;
   padding: 40px;
   border-radius: 0 0 5px 5px;

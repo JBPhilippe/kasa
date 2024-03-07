@@ -1,0 +1,38 @@
+@import '../../variables.scss';
+
+.host {
+    @include mobile-breakpoint {
+		display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+	}
+}
+.accomodation-host {
+    display: flex;
+    color: $primary-color;
+    align-items: center;
+    gap: 15px;
+   
+}
+
+.host-name {
+    text-align: center;
+}
+
+.host-name p {
+    font-weight: 600;
+}
+
+.host-img {
+    border-radius: 100px;
+    scale: 80%;
+}
+
+.rating img {
+    margin: 5px;
+
+    @include mobile-breakpoint {
+		vertical-align: middle;
+        margin-top: 40px;
+	}
+}

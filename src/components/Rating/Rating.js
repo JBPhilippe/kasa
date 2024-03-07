@@ -1,6 +1,7 @@
 import emptyStar from '../../assets/emptyStar.png';
 import fullStar from '../../assets/fullStar.png';
 
+
 const Rating = ({ rating }) => {
 
     return (

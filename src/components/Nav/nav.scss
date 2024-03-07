@@ -9,15 +9,15 @@
 	&-link-about {
 	text-decoration: none;
 	color: black;
-	margin-left: 0.625rem;
-	font-size: 0.75rem;
+	margin-left: 2.5rem;
+	font-size: 1.5rem;
 	font-weight: 500;
-	line-height: 100%;
-	text-transform: uppercase;
-	@include desktop-breakpoint {
-		margin-left: 3.5625rem;
-		font-size: 1.5rem;
-		text-transform: capitalize;
+	text-transform: capitalize;
+	@include mobile-breakpoint {
+		text-transform: uppercase;
+		font-weight: 700;
+		margin-left: 1rem;
+		font-size: 0.8rem;
 	}
 	&:hover{
 		text-decoration: underline;
