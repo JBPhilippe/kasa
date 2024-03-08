@@ -5,7 +5,6 @@ import Banner from '../../components/Banner/Banner'
 import imgAboutBanner from "../../assets/imgAboutBanner.png";
 import Collapse from "../../components/Collapse/Collapse";
 import CollapseData from "../../datas/aboutCollapse.json"
-import './about.scss'
 
 const About = () => {
   return (
@@ -21,7 +20,7 @@ const About = () => {
                 <div key={item.id}>
                   <Collapse title={item.title}>
                     <p>{item.content}</p>
-                    </Collapse>
+                  </Collapse>
                 </div>
               );
             })}

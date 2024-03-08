@@ -6,7 +6,7 @@ import AccomodationSheet from "../../components/AccomodationSheet/AccomodationSh
 const AccomodationPage = () => {
   return (
     <div className="home">
-      <AccomodationSheet /> 
+      <AccomodationSheet />
     </div>
   );
 };

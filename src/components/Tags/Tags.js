@@ -1,5 +1,3 @@
-import "./tags.scss";
-
 const Tags = ({ tags }) => {
   return (
     <div className="housing-tags">

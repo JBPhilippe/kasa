@@ -1,0 +1,32 @@
+.page-404 {
+  text-align: center;
+  height: auto;
+}
+
+.titre-404 {
+  color: #ff6060;
+  font-size: 150px;
+  margin-top: 5rem;
+
+  @include mobile-breakpoint {
+    font-size: 100px;
+    margin-top: 10rem;
+  }
+}
+
+.description-404 {
+  color: #ff6060;
+  display: block;
+  margin-top: 5rem;
+  font-size: 20px;
+}
+
+.lien-site.lien-404 {
+  display: block;
+  margin-top: 150px;
+  margin-bottom: 8rem;
+
+  @include mobile-breakpoint {
+    margin-bottom: 8rem;
+  }
+}

@@ -1,14 +1,11 @@
-@import '../../variables.scss';
-
-
 .housing-tags {
 	display: flex;
 	flex-wrap: wrap;
-	gap:0.5rem;
+	gap: 0.5rem;
 
-  }
-  
-  .tag {
+}
+
+.tag {
 	width: auto;
 	height: 25px;
 	background-color: $primary-color;
@@ -19,6 +16,4 @@
 	text-align: center;
 	padding: 4px 15px;
 	margin-top: 20px;
-  }
-  
-  
+}

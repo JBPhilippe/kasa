@@ -1,9 +1,8 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import './nav.scss'
 
 
-const Nav = () =>  {
+const Nav = () => {
   return (
     <nav className="nav">
       <NavLink to="/" className="nav-link-home">

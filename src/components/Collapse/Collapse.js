@@ -1,11 +1,10 @@
 import { useState } from "react";
 import arrow from '../../assets/arrow.png';
-import "./collapse.scss";
 
 
-const iconInitialState = {transform: "rotate(0deg)", transition: "all 0.2s linear"}
+const iconInitialState = { transform: "rotate(0deg)", transition: "all 0.2s linear" }
 
-  const Collapse = ({ title, children }) => {
+const Collapse = ({ title, children }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [iconStyle, setIconStyle] = useState(iconInitialState);
 
@@ -13,7 +12,7 @@ const iconInitialState = {transform: "rotate(0deg)", transition: "all 0.2s linea
     setIsOpen(!isOpen);
 
     setIconStyle(isOpen ? iconInitialState : { transform: "rotate(-180deg)", transition: "all 0.2s linear" })
-    
+
 
   };
 

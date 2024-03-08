@@ -9,28 +9,27 @@ import Rating from "../Rating/Rating";
 import Slider from "../Slider/Slider";
 import Tags from "../Tags/Tags";
 import ItemsData from "../../datas/accomodation.json"
-import "./accomodation.scss";
 
 const AccomodationSheet = () => {
 
-  
+
   const { id } = useParams();
 
   const [sliderPicture, setSliderPicture] = useState([]);
-  
+
   const accomodation = ItemsData.find((item) => item.id === id);
-  document.title=accomodation.title
-  
+  document.title = accomodation.title
+
   useEffect(() => {
-		if (accomodation) {
-			setSliderPicture(accomodation.pictures);
-		}
+    if (accomodation) {
+      setSliderPicture(accomodation.pictures);
+    }
 
-	}, [id, accomodation]);
+  }, [id, accomodation]);
 
-	if (!accomodation) {
-		return <ErrorPage />;
-	}
+  if (!accomodation) {
+    return <ErrorPage />;
+  }
 
   const {
     rating,
@@ -43,16 +42,16 @@ const AccomodationSheet = () => {
   } = accomodation;
 
   const [firstName, lastName] = name.split(" ");
-  
+
 
   return (
     <>
       <Header />
       <main className="housing-main">
 
-        
+
         <Slider sliderPicture={sliderPicture} />
-        
+
 
         <section className="accomodation-header">
 
@@ -63,14 +62,14 @@ const AccomodationSheet = () => {
           </div>
 
           <div className="host">
-          <Host  firstName={firstName} lastName={lastName} picture={picture}/>
-          <Rating rating={rating} />
+            <Host firstName={firstName} lastName={lastName} picture={picture} />
+            <Rating rating={rating} />
           </div>
 
         </section>
 
         <section className="accomodation-collapse">
-          
+
           <Collapse title="Description">
             <p>{description}</p>
           </Collapse>
