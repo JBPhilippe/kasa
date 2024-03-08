@@ -11,6 +11,7 @@
 	@include mobile-breakpoint {
 		height: 580px;
 	}
+	
 }
 
 .slider {
@@ -88,35 +89,34 @@ p.right-Arrow {
 	@include mobile-breakpoint {
 		display: block
 	}
-}
 
+	&-title {
+			color: $primary-color;
+			font-size: 30px;
+			margin-top: 20px;
+			margin-bottom: 5px;
+		}
 
-.accomodation-title {
-	color: $primary-color;
-	font-size: 30px;
-	margin-top: 20px;
-	margin-bottom: 5px;
-}
-
-.accomodation-location {
-	color: black;
-	margin: 0;
-	font-weight: 600;
-}
-
-
-.accomodation-collapse {
-	display: flex;
-	width: 100%;
-	gap: 2rem;
-	margin-top: 20px;
-	margin-bottom: 40px;
-
-	@include mobile-breakpoint {
-		display: block;
+	&-location {
+			color: black;
+			margin: 0;
+			font-weight: 600;
+		}
 	}
-}
 
+	.accomodation-collapse {
+			display: flex;
+			width: 100%;
+			gap: 2rem;
+			margin-top: 20px;
+			margin-bottom: 40px;
+		
+			@include mobile-breakpoint {
+				display: block;
+			}
+		}
+
+	
 .equipments-content {
 	display: flex;
 	flex-direction: column;

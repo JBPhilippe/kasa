@@ -1,11 +1,9 @@
 import { useState } from "react";
-import icon from '../../assets/chevron.svg';
+import arrow from '../../assets/arrow.png';
 import "./collapse.scss";
 
 
-const iconInitialState = {
-  transform: "rotate(180deg)",
-};
+const iconInitialState = {transform: "rotate(0deg)", transition: "all 0.2s linear"}
 
   const Collapse = ({ title, children }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -14,14 +12,16 @@ const iconInitialState = {
   const toggleCollapse = () => {
     setIsOpen(!isOpen);
 
-    setIconStyle(isOpen ? iconInitialState : { transform: "rotate(0deg)", transition: "all 0.17s linear" });
+    setIconStyle(isOpen ? iconInitialState : { transform: "rotate(-180deg)", transition: "all 0.2s linear" })
+    
+
   };
 
   return (
     <div className="collapse">
       <button className="collapse-button" onClick={toggleCollapse}>
         {title}
-        <img src={icon} className="collapse-icon" alt="collapse icon" style={iconStyle} />
+        <img src={arrow} className="collapse-icon" alt="collapse icon" style={iconStyle} />
       </button>
       {isOpen && <div className="collapse-content">{children}</div>}
     </div>
@@ -29,3 +29,4 @@ const iconInitialState = {
 };
 
 export default Collapse;
+

@@ -15,24 +15,28 @@
    
 }
 
-.host-name {
-    text-align: center;
-}
+.host {
 
-.host-name p {
-    font-weight: 600;
-}
+    &-name {
+            text-align: center;
+        }
 
-.host-img {
-    border-radius: 100px;
-    scale: 80%;
+    &-name p {
+            font-weight: 600;
+        }
+
+    &-img {
+            border-radius: 100px;
+            scale: 80%;
+        }
 }
 
 .rating img {
-    margin: 5px;
+        margin: 1px;
+    
+        @include mobile-breakpoint {
+    		vertical-align: middle;
+            margin-top: 40px;
+    	}
+    }
 
-    @include mobile-breakpoint {
-		vertical-align: middle;
-        margin-top: 40px;
-	}
-}
