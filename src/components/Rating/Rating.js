@@ -9,8 +9,9 @@ const Rating = ({ rating }) => {
             {[...Array(5)].map((star, index) => {
                 const ratingValue = index + 1;
                 return (
-
+                   
                     <img key={index} src={ratingValue <= rating ? fullStar : emptyStar} alt="star" />
+                    
                 )
             })}
         </div>

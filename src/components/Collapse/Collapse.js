@@ -4,7 +4,7 @@ import arrow from '../../assets/arrow.png';
 
 const iconInitialState = { transform: "rotate(0deg)", transition: "all 0.2s linear" }
 
-const Collapse = ({ title, children }) => {
+const Collapse = ({ title, content }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [iconStyle, setIconStyle] = useState(iconInitialState);
 
@@ -16,13 +16,19 @@ const Collapse = ({ title, children }) => {
 
   };
 
+  const divTitle = title
+
   return (
-    <div className="collapse">
+
+   
+    <div className={divTitle}>
       <button className="collapse-button" onClick={toggleCollapse}>
         {title}
         <img src={arrow} className="collapse-icon" alt="collapse icon" style={iconStyle} />
       </button>
-      {isOpen && <div className="collapse-content">{children}</div>}
+      <div className={isOpen ? 'collapse_dropdown' : 'collapse_dropdown_hidden'}>
+        {content}
+      </div>
     </div>
   );
 };

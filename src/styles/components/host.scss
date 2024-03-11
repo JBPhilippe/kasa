@@ -12,29 +12,39 @@
     align-items: center;
     gap: 15px;
 
+    @include mobile-breakpoint {
+       gap:0;
+    }
+
 }
 
 .host {
 
-    &-name {
-        text-align: center;
-    }
+    margin-top: 10px;
+
 
     &-name p {
         font-weight: 600;
+        margin: 2px;
+
+        @include mobile-breakpoint-400 {
+            font-size: 12px
+        }
     }
 
     &-img {
         border-radius: 100px;
-        scale: 80%;
+        width: 70px;
+
+        @include mobile-breakpoint {
+            width: 100px
+        }
+
+        @include mobile-breakpoint-400 {
+            width: 80px
+        }
+        
     }
 }
 
-.rating img {
-    margin: 1px;
 
-    @include mobile-breakpoint {
-        vertical-align: middle;
-        margin-top: 40px;
-    }
-}

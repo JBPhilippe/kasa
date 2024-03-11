@@ -43,8 +43,16 @@ const AccomodationSheet = () => {
 
   const [firstName, lastName] = name.split(" ");
 
+  const equipmentsList = <ul className="equipments-content">
+    {equipments.map((equipment, index) => {
+      return <li key={index}>{equipment}</li>;
+    })}
+  </ul>
+
 
   return (
+
+    
     <>
       <Header />
       <main className="housing-main">
@@ -63,24 +71,21 @@ const AccomodationSheet = () => {
 
           <div className="host">
             <Host firstName={firstName} lastName={lastName} picture={picture} />
-            <Rating rating={rating} />
+            <div className><Rating rating={rating} /></div>
           </div>
 
         </section>
 
         <section className="accomodation-collapse">
 
-          <Collapse title="Description">
-            <p>{description}</p>
-          </Collapse>
 
-          <Collapse title="Équipements">
-            <ul className="equipments-content">
-              {equipments.map((equipment, index) => {
-                return <li key={index}>{equipment}</li>;
-              })}
-            </ul>
-          </Collapse>
+          <Collapse title="Description" content={description} />
+
+          <Collapse title="Équipements" content={equipmentsList} />
+
+
+          
+
 
         </section>
 

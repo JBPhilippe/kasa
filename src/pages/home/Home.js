@@ -7,7 +7,7 @@ import Footer from "../../components/Footer/Footer";
 
 
 const Home = () => {
-  document.title = "Accueil"
+  document.title = "Kasa"
   return (
     <div className="home">
       <Header />

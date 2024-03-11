@@ -1,8 +1,10 @@
 $primary-color: #ff6060;
+$grey-background : #f6f6f6;
 
 
 $breakpoint: (
 	desktop: 768px,
+	mobile: 400px,
 );
 
 
@@ -11,3 +13,10 @@ $breakpoint: (
 		@content;
 	}
 }
+
+@mixin mobile-breakpoint-400 {
+	@media screen and (max-width: map-get($breakpoint, mobile)) {
+		@content;
+	}
+}
+

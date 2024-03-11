@@ -41,12 +41,6 @@ const Slider = ({ sliderPicture }) => {
               <img src={image} alt="img-appartement" className="slide__image" />
             )}
 
-            {index === current && length > 1 && (
-              <span className="slider__number">
-                {current + 1}/{length}
-              </span>
-
-            )}
           </div>
         );
       })}

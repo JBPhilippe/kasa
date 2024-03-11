@@ -1,3 +1,23 @@
+.accomodation-collapse {
+  display: flex;
+  justify-content: space-between;
+  gap: 5rem;
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 40px;
+
+  @include mobile-breakpoint {
+    display: block;
+  }
+}
+
+.Description,
+.Équipements {
+  width: 100%;
+}
+
+
+
 .collapse {
 
   &-button {
@@ -5,8 +25,9 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    gap: 5rem;
     height: 45px;
-    font-size: 22px;
+    font-size: 20px;
     padding: 0 20px;
     text-align: start;
     background-color: $primary-color;
@@ -14,25 +35,49 @@
     cursor: pointer;
     border: none;
     border-radius: 5px;
+
+    @include mobile-breakpoint {
+      margin-bottom: 1rem;
+      font-size: 15px;
+    }
   }
+
 
   &-icon {
     width: 20px;
   }
 
-  &-content {
-    background-color: #f6f6f6;
-    color: black;
-    font-size: 18px;
-    padding: 30px;
-    border-radius: 0 0 5px 5px;
-    position: relative;
-    bottom: 20px;
-    z-index: -1;
+  &_dropdown {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    letter-spacing: 1px;
+    visibility: visible;
+    opacity: 1;
+    height: auto;
+    padding: 10px;
+    letter-spacing: 2px;
+    font-size: clamp(12px, 1.8vw, 18px);
+    transition: visibility 0.5s ease-in-out,
+      opacity 0.5s ease-in-out,
+      height 0.2s ease-in-out;
+
+    ul.equipments-content {
+      margin:0
+    }
 
     @include mobile-breakpoint {
-      bottom: 25px;
+      margin: 0 0 20px 20px;
+      
+      padding: 0
     }
+
+    &_hidden {
+      visibility: hidden;
+      opacity: 0;
+      height: 0;
+    }
+
   }
 
 }
