@@ -5,4 +5,50 @@ main {
   @include mobile-breakpoint {
     margin: 0 1rem 0 1rem;
   }
+
+
 }
+
+
+.about {
+
+  
+  .collapse-about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    padding-left: 5%;
+    padding-right: 5%;
+    
+    .collapse-bar {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+
+    .collapse-button {
+      margin-bottom: 1.2rem;
+      margin-top: 1.2rem;
+      width:100%;
+      font-weight: 600;
+    }
+  
+    .collapse_dropdown {
+      padding:0;
+      padding-left: 2%;
+  
+      @include mobile-breakpoint {
+        margin: 0;
+      }
+    }
+  
+    .footer {
+      margin-top: 1.2rem;
+    }
+  }
+  
+}
+
+
+

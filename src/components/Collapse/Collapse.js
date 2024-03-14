@@ -16,12 +16,11 @@ const Collapse = ({ title, content }) => {
 
   };
 
-  const divTitle = title
 
   return (
 
    
-    <div className={divTitle}>
+    <div className="collapse-bar">
       <button className="collapse-button" onClick={toggleCollapse}>
         {title}
         <img src={arrow} className="collapse-icon" alt="collapse icon" style={iconStyle} />

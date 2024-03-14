@@ -18,7 +18,7 @@ const AccomodationSheet = () => {
   const [sliderPicture, setSliderPicture] = useState([]);
 
   const accomodation = ItemsData.find((item) => item.id === id);
-  document.title = accomodation.title
+  
 
   useEffect(() => {
     if (accomodation) {
@@ -30,6 +30,8 @@ const AccomodationSheet = () => {
   if (!accomodation) {
     return <ErrorPage />;
   }
+
+  document.title = accomodation.title
 
   const {
     rating,
@@ -71,7 +73,7 @@ const AccomodationSheet = () => {
 
           <div className="host">
             <Host firstName={firstName} lastName={lastName} picture={picture} />
-            <div className><Rating rating={rating} /></div>
+            <div><Rating rating={rating} /></div>
           </div>
 
         </section>

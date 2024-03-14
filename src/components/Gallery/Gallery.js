@@ -10,7 +10,7 @@ const Gallery = () => {
     <div className="home-gallery">
       {accomodations.map((accomodation) => {
         return (
-          <article key={accomodation.id}>
+          <article className="thumb" key={accomodation.id}>
             <Link to={`/logement/${accomodation.id}`}>
               <Cards image={accomodation.cover} title={accomodation.title} />
             </Link>

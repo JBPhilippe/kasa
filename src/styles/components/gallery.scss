@@ -7,10 +7,14 @@
   padding: 50px;
   border-radius: 25px;
 
+  .thumb {
+    height: 255px;
+  }
+
   @include mobile-breakpoint {
     background-color: white;
     grid-template-columns: repeat(1, 1fr);
-    row-gap: 5px;
+    row-gap: 15px;
     padding: 0px;
     margin: 0;
   }

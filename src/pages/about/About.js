@@ -13,19 +13,18 @@ const About = () => {
       <main>
         <Banner image={imgAboutBanner} titre="" />
 
-        <div className="collapse">
-          <div className="collapse__dropdown">
-            {CollapseData.map((item) => {
+        
+          <div className="collapse-about">
+            {CollapseData.map((data) => {
               return (
-                <div key={item.id}>
-                  <Collapse title={item.title}>
-                    <p>{item.content}</p>
-                  </Collapse>
+                <div key={data.id}>
+                  <Collapse title={data.title} content={data.content}/>
+                    
                 </div>
               );
             })}
           </div>
-        </div>
+        
       </main>
 
       <Footer />
