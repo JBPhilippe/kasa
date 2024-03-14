@@ -52,16 +52,18 @@
     flex-direction: column;
     gap: 5px;
     letter-spacing: 1px;
+    height:auto;
     visibility: visible;
     opacity: 1;
     padding:3%;
     font-size: clamp(12px, 1.8vw, 18px);
     background-color: $grey-background;
-    
-    transition: 
-    visibility 0.2s ease-in-out, 
-    height 0.2s ease-in-out,         
-    opacity 0.2s ease-in-out;        
+
+    transform: translateY(0px);
+    transition: transform 0.5s ease-in-out,
+    visibility 0.5s ease-in-out, 
+    height 0.5s ease-in-out,         
+    opacity 0.5s ease-in-out;        
       
     ul.equipments-content {
       margin:0;
@@ -76,14 +78,11 @@
     }
 
     &_hidden {
-      
+      transform: translateY(-10px);
       visibility: hidden;
       opacity: 0;
       height:0; 
     
-      transition:  
-      height 0.1s ease-in-out,         
-      opacity 0.1s ease-in-out;   
     }
   }
 }
