@@ -5,7 +5,7 @@ import AccomodationSheet from "../../components/AccomodationSheet/AccomodationSh
 
 const AccomodationPage = () => {
   return (
-    <div className="home">
+    <div className="accomodation">
       <AccomodationSheet />
     </div>
   );

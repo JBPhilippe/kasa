@@ -1,7 +1,4 @@
 .nav {
-	flex-wrap: nowrap;
-
-
 	&-link-home,
 	&-link-about {
 		text-decoration: underline;
@@ -16,7 +13,6 @@
 			font-weight: 700;
 			margin-left: 2rem;
 			font-size: 0.8rem;
-			width:10rem;
 		}
 
 		@include mobile-breakpoint-400 {
@@ -24,12 +20,6 @@
 			margin-left: 0.2rem;
 			
 		}
-
-		// A voir si au hover ou permanent
-
-		// &:hover {
-		// 	text-decoration: underline;
-		// }
 	}
 
 }

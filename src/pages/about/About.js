@@ -7,7 +7,10 @@ import Collapse from "../../components/Collapse/Collapse";
 import CollapseData from "../../datas/aboutCollapse.json"
 
 const About = () => {
+
+  document.title = "Kasa - About"
   return (
+    
     <div className="about">
       <Header />
       <main>

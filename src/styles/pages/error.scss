@@ -1,6 +1,19 @@
 .page-404 {
   text-align: center;
   height: auto;
+
+  
+
+}
+
+.page-404 {
+  
+  .header nav a.nav-link {
+    &-home, &-about {
+      text-decoration: none;
+    }
+    
+}
 }
 
 .titre-404 {

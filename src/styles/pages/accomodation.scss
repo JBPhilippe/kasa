@@ -1,3 +1,11 @@
+.accomodation {
+	.header nav a.nav-link {
+		&-home, &-about {
+			text-decoration: none;
+		}
+	}
+}
+
 .slide {
 	display: flex;
 	position: relative;
