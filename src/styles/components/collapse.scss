@@ -12,16 +12,21 @@
 }
 
 
+
+
 .collapse {
 
   &-bar {
+   
     width: 100%;
     @include mobile-breakpoint {
       margin-bottom: 1.5rem;
     }
   }
 
+
   &-button {
+    
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -51,19 +56,16 @@
     display: flex;
     flex-direction: column;
     gap: 5px;
-    letter-spacing: 1px;
-    height:auto;
-    visibility: visible;
+    // on exagère la max-height pour que tout futur contenu puisse être inclus dans la div//
+    //compliqué de faire un slide down avec une valeur height auto//
+    max-height: 20000px;
     opacity: 1;
     padding:3%;
     font-size: clamp(12px, 1.8vw, 18px);
     background-color: $grey-background;
-
-    transform: translateY(0px);
-    transition: transform 0.5s ease-in-out,
-    visibility 0.5s ease-in-out, 
-    height 0.5s ease-in-out,         
-    opacity 0.5s ease-in-out;        
+    // on transitionne sur la max height pour un effet de slide down//
+    transition: max-height 4s;
+    
       
     ul.equipments-content {
       margin:0;
@@ -73,16 +75,15 @@
 
     @include mobile-breakpoint {
       height: auto;
-      padding-top:0.5rem;
       margin-bottom: 1rem;
     }
 
     &_hidden {
-      transform: translateY(-10px);
       visibility: hidden;
       opacity: 0;
-      height:0; 
-    
+      max-height:0;
+      transition: max-height 0.2s;
+      
     }
   }
 }

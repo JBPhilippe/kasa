@@ -10,7 +10,7 @@
 	display: flex;
 	position: relative;
 	width: auto;
-	height: 43rem;
+	height: 35rem;
 
 	@include mobile-breakpoint {
 		height: 20rem;
@@ -33,7 +33,7 @@
 		object-fit: cover;
 		width: 100%;
 		overflow: hidden;
-		height: 43rem;
+		height: 35rem;
 		left: 0%;
 		right: 0%;
 		top: 0%;

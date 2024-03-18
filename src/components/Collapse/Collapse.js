@@ -19,14 +19,18 @@ const Collapse = ({ title, content }) => {
 
   return (
 
-   
+
     <div className="collapse-bar">
-      <button className="collapse-button" onClick={toggleCollapse}>
-        {title}
-        <img src={arrow} className="collapse-icon" alt="collapse icon" style={iconStyle} />
-      </button>
-      <div className={isOpen ? 'collapse_dropdown' : 'collapse_dropdown_hidden'}>
-        {content}
+      <div className="outer-container">
+        <button className="collapse-button" onClick={toggleCollapse}>
+          {title}
+          <img src={arrow} className="collapse-icon" alt="collapse icon" style={iconStyle} />
+        </button>
+        <div className="inner-container">
+          <div className={isOpen ? 'collapse_dropdown' : 'collapse_dropdown_hidden'}>
+            {content}
+          </div>
+        </div>
       </div>
     </div>
   );
