@@ -36,14 +36,13 @@ Ceci est un projet réalisé dans le cadre du programme de formation Développeu
 
 
 
-
 ## Demo
 
 🏠 [Site live](https://jbphilippe.github.io/kasa/) 🏢
 
 ## Situation
 
-Développeur freelance, missionné en tant que Développeur Front-end, une entreprise spécialisée dans la location d’appartements entre particuliers depuis près de 10 ans. .
+Développeur freelance, missionné en tant que Développeur Front-end, une entreprise spécialisée dans la location d’appartements entre particuliers depuis près de 10 ans.
 
 L’entreprise souhaite faire une refonte totale de leur site pour passer à une stack complète en JavaScript avec NodeJS côté Back-end et React côté Front-end.
 
